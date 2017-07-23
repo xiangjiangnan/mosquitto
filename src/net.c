@@ -192,7 +192,7 @@ int mqtt3_socket_accept(struct mosquitto_db *db, mosq_sock_t listensock)
 
 	_mosquitto_log_printf(NULL, MOSQ_LOG_NOTICE, "New connection from %s on port %d.", new_context->address, new_context->listener->port);
 
-	return new_sock;
+	return new_sock; //返回已连接套接字描述符
 }
 
 #ifdef WITH_TLS
